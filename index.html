@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[#EFEBE8] font-[Inter] ">
+
+  <div class="relative py-2 px-3 text-xs sm:text-sm flex items-center justify-between gap-2 sm:gap-4 bg-white">
+    <button id="prev-announcement" class="text-[#404142] text-lg sm:text-xl">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+
+    <div class="overflow-hidden flex-1 ">
+      <div id="announcement-slider" class="flex transition-transform duration-500 ease-in-out">
+        <div class="min-w-full flex-shrink-0 text-center text-[#404142]">
+          Sign Up Our Newsletter And Save 10% On Your First Order
+        </div>
+        <div class="min-w-full flex-shrink-0 text-center text-[#404142]">
+          Enjoy Free Shipping On All Orders Above $50
+        </div>
+      </div>
+    </div>
+
+    <button id="next-announcement" class="text-[#404142] text-lg sm:text-xl">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+
+  <nav class="bg-white rounded-none sm:rounded-xl my-0 sm:my-4 shadow-md max-w-[97%] mx-auto sticky top-0 z-40">
+    <div class="px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+
+      <div class="hidden md:flex space-x-6 text-sm lg:text-base text-[#404142]">
+        <a href="#" class="hover:text-black">Home</a>
+        <a href="#" class="hover:text-black">Shop All</a>
+
+        <div class="relative group">
+          <button class="flex items-center hover:text-black gap-1">
+            Collections
+            <i class="fa-solid fa-angle-down text-xs"></i>
+          </button>
+          <div class="absolute hidden group-hover:block bg-white shadow-lg rounded w-48 mt-2">
+            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Home Styling</a>
+            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Tableware</a>
+            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Green Décor</a>
+          </div>
+        </div>
+
+        <a href="#" class="hover:text-black">New Arrivals</a>
+      </div>
+
+      <img src="./assets/images/Logo.png" class="w-12 sm:w-16" alt="Logo">
+
+      <div class="hidden md:flex items-center gap-4 lg:gap-6 text-[#404142] text-sm lg:text-base">
+        <a href="#" class="hover:text-black">About Us</a>
+        <a href="#" class="hover:text-black">Contact</a>
+        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+        <i class="fa-regular fa-user cursor-pointer"></i>
+        <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-[#404142]">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100 px-4 pb-4 bg-white">
+      <div class="flex flex-col gap-2 text-[#404142] text-sm">
+        <a href="#" class="py-1 hover:text-black">Home</a>
+        <a href="#" class="py-1 hover:text-black">Shop All</a>
+        <button class="py-1 flex items-center justify-between hover:text-black">
+          <span>Collections</span>
+          <i class="fa-solid fa-angle-down text-xs"></i>
+        </button>
+        <div class="pl-4 flex flex-col gap-1 text-xs text-gray-600">
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#">Home Styling</a>
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#">Tableware</a>
+          <a class="block px-4 py-2 hover:bg-gray-100" href="#">Green Décor</a>
+        </div>
+        <a href="#" class="py-1 hover:text-black">New Arrivals</a>
+
+        <div class="border-t border-gray-100 mt-2 pt-2 flex items-center gap-3">
+          <a href="#" class="hover:text-black text-sm">About Us</a>
+          <a href="#" class="hover:text-black text-sm">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4 pt-2 text-xl">
+          <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+          <i class="fa-regular fa-user cursor-pointer"></i>
+          <i class="fa-solid fa-bag-shopping cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div
+    class="relative w-[97%] mx-auto h-[260px] sm:h-[340px] md:h-[520px] lg:h-[725px] overflow-hidden rounded-xl shadow-md mt-4">
+    <div id="banner-slides" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+
+
+      <div class="w-full flex-shrink-0 relative">
+        <img src="./assets/images/banner/Desktop Banner 1.png" class="hidden md:block w-full h-full object-cover" />
+        <img src="./assets/images/banner/Mobile Banner 1.png" class="block md:hidden w-full h-full object-cover" />
+
+        <div class="absolute inset-0 flex flex-col justify-center items-start text-white p-4 sm:p-6 md:pl-24">
+          <h2 class="text-1xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
+            Unleash Elegance:Your Home, Your Style
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+            Transform your living space with Charlie Lux Home’s curated collection. From statement lighting to elegant
+            rugs and wall art, each piece is designed to bring timeless style and comfort to your home.
+          </p>
+          <button
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            <i class="fa-solid fa-arrow-right"></i> Shop Now
+          </button>
+        </div>
+      </div>
+
+
+      <div class="w-full flex-shrink-0 relative">
+        <img src="./assets/images/banner/Desktop Banner 2.png" class="hidden md:block w-full h-full object-cover" />
+        <img src="./assets/images/banner/Mobile Banner 2.png" class="block md:hidden w-full h-full object-cover" />
+
+        <div class="absolute inset-0 flex flex-col justify-center items-end text-white p-4 sm:p-6 md:pr-24 text-right">
+          <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
+            Elevate Every Sip:Luxurious Drinkware Collection
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+            Discover our stunning glassware collection, designed to add a touch of sophistication to any occasion.
+            Perfect for entertaining or everyday indulgence, make every moment unforgettable with our polished, elegant
+            pieces.
+          </p>
+          <button
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            <i class="fa-solid fa-arrow-right"></i> Shop Now
+          </button>
+        </div>
+      </div>
+
+
+      <div class="w-full flex-shrink-0 relative">
+        <img src="./assets/images/banner/Desktop Banner 3.png" class="hidden md:block w-full h-full object-cover" />
+        <img src="./assets/images/banner/Mobile Banner 3.png" class="block md:hidden w-full h-full object-cover" />
+
+        <div class="absolute inset-0 flex flex-col justify-center items-start text-white p-4 sm:p-6 md:pl-24">
+          <h2 class="text-1xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
+            Raising Homes,Exceeding Expectations
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+            At Charlie Lux Home, we offer more than just décor. Our carefully curated pieces bring elegance, comfort,
+            and style to every corner of your home, elevating spaces beyond your expectations.
+          </p>
+          <button
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            <i class="fa-solid fa-arrow-right"></i> Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <button id="prev-banner"
+      class="absolute bottom-3 sm:bottom-6 right-16 sm:right-20 bg-black/60 text-white p-2 sm:p-3 text-sm sm:text-lg rounded-full hover:bg-black/80 z-50">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <button id="next-banner"
+      class="absolute bottom-3 sm:bottom-6 right-3 sm:right-6 bg-black/60 text-white p-2 sm:p-3 text-sm sm:text-lg rounded-full hover:bg-black/80 z-50">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+
+
+  <section class="max-w-[97%] mx-auto mt-10 sm:mt-16">
+    <div class="text-center mb-6 sm:mb-10 px-4">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#404142]">Good Morning!</h2>
+      <p class="mt-3 text-[#6B6B6B] max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
+        Welcome to Charlie Lux Home, your destination for exquisite interior design.
+        From captivating wall art to sumptuous rugs and enchanting lighting, redefine your space with our carefully
+        curated collection of timeless elegance.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+
+      <div class="relative rounded-xl overflow-hidden">
+        <img src="./assets/images/row collection/Row collection 1.png"
+          class="w-full h-[140px] sm:h-[180px] md:h-[260px] lg:h-[320px] object-cover">
+        <div
+          class="absolute bottom-0 w-full bg-black/60 text-white py-2 sm:py-3 text-center text-xs sm:text-sm md:text-base">
+          Artificial Flowers And Plants
+        </div>
+      </div>
+
+      <div class="relative rounded-xl overflow-hidden">
+        <img src="./assets/images/row collection/Row collection 2.png"
+          class="w-full h-[140px] sm:h-[180px] md:h-[260px] lg:h-[320px] object-cover">
+        <div
+          class="absolute bottom-0 w-full bg-black/60 text-white py-2 sm:py-3 text-center text-xs sm:text-sm md:text-base">
+          Luxury Vase
+        </div>
+      </div>
+
+      <div class="relative rounded-xl overflow-hidden">
+        <img src="./assets/images/row collection/Row collection 3.png"
+          class="w-full h-[140px] sm:h-[180px] md:h-[260px] lg:h-[320px] object-cover">
+        <div
+          class="absolute bottom-0 w-full bg-black/60 text-white py-2 sm:py-3 text-center text-xs sm:text-sm md:text-base">
+          Ginger Jar
+        </div>
+      </div>
+
+      <div class="relative rounded-xl overflow-hidden">
+        <img src="./assets/images/row collection/Row collection 4.png"
+          class="w-full h-[140px] sm:h-[180px] md:h-[260px] lg:h-[320px] object-cover">
+        <div
+          class="absolute bottom-0 w-full bg-black/60 text-white py-2 sm:py-3 text-center text-xs sm:text-sm md:text-base">
+          Drinkware
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-[97%] mx-auto mt-12 sm:mt-20 mb-10">
+    <div class="text-center mb-6 sm:mb-10 px-4">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#404142]">New Arrivals</h2>
+      <p class="mt-2 text-[#6B6B6B] text-xs sm:text-sm md:text-base">
+        Discover the latest in home décor. Fresh, stylish designs to elevate your space with timeless elegance.
+      </p>
+    </div>
+
+    <div class="relative">
+      <div id="new-arrivals" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth px-2 pb-4 snap-x snap-mandatory">
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/new arrivals/new arrival 1.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Lagoona Ginger Jar</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$31.80</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Add To Cart
+          </button>
+        </div>
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/new arrivals/new arrival 2.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Lux Ceramic Dinner Tablewear</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$25.00</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Choose an option
+          </button>
+        </div>
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/new arrivals/new arrival 3.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Luxury Abstract Vase</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$51.20</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Choose an option
+          </button>
+        </div>
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/new arrivals/new arrival 4.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Luxurious Silent Wall Clock</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$150.00</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Choose an option
+          </button>
+        </div>
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/new arrivals/new arrival 5.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Modern European Dining Chairs</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$298.28</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Choose an option
+          </button>
+        </div>
+
+        <div class="min-w-[210px] sm:min-w-[230px] md:min-w-[250px] bg-white rounded-xl p-3 sm:p-4 shadow snap-start">
+          <img src="./assets/images/selling products/selling product 5.png"
+            class="w-full h-[180px] sm:h-[200px] md:h-[220px] object-contain">
+          <h3 class="mt-3 text-center text-xs sm:text-sm font-medium">Modern European statue</h3>
+          <p class="text-center font-semibold mt-1 text-sm">$167.28</p>
+          <button
+            class="w-full mt-3 border-2 border-black py-2 rounded text-xs sm:text-sm hover:bg-black hover:text-white transition">
+            Choose an option
+          </button>
+        </div>
+      </div>
+
+      <button onclick="scrollArrivals(-1)"
+        class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 text-white p-2 rounded-full z-50">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <button onclick="scrollArrivals(1)"
+        class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 text-white p-2 rounded-full z-50">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="max-w-[97%] mx-auto mt-20 bg-white rounded-xl shadow overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2">
+
+      <div>
+        <img src="./assets/images/Hot product.png" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="flex flex-col  justify-center p-10 text-center ">
+        <h3 class="text-3xl font-semibold text-[#404142]">Hot Products</h3>
+        <p class="text-[#6B6B6B] mt-4 text-sm md:text-base leading-relaxed">
+          Time is running out, so don’t wait any longer! Get your hands on this
+          elegant and luxurious product of your choice today and add a fabulous
+          touch to the look of your home. Experience the quality and class that
+          comes with it.
+        </p>
+
+        <button
+          class="mt-6 bg-black text-white px-6 py-3 text-sm rounded-full flex items-center justify-center gap-2 self-center hover:bg-gray-900 transition">
+          <i class="fa-solid fa-arrow-right"></i> Shop Now
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="max-w-[97%] mx-auto mt-14">
+    <h2 class="text-center text-3xl md:text-4xl font-semibold text-[#404142]">
+      Best Selling Products
+    </h2>
+    <p class="text-center text-[#6B6B6B] mt-2 text-sm md:text-base max-w-2xl mx-auto">
+      Shop our customer favorites! These top-rated décor pieces combine style and
+      functionality, perfect for transforming any space effortlessly.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 1.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">High-End Large Floor Vase</h3>
+        <p class="text-center font-semibold mt-1">$184.40</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 2.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Pierced Gold Ginger Jar</h3>
+        <p class="text-center font-semibold mt-1">$18.49</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 3.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Romantic Rainbow Glass</h3>
+        <p class="text-center font-semibold mt-1">$21.00</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 4.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Sage Flower Bouquet</h3>
+        <p class="text-center font-semibold mt-1">$19.00</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 5.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Vase Decoration Art Light</h3>
+        <p class="text-center font-semibold mt-1">$69.00</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 6.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Wine Glass Rack Upside Down Glass...</h3>
+        <p class="text-center font-semibold mt-1">$55.76</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 7.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Wishing Aladdin Lamp Decoration</h3>
+        <p class="text-center font-semibold mt-1">$23.13</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 8.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Cadeira Throne Dining Chair</h3>
+        <p class="text-center font-semibold mt-1">$197.73</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 9.png" class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">Creative Luxury White Petal Ceramic...</h3>
+        <p class="text-center font-semibold mt-1">$77.75</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+        <img src="./assets/images/selling products/selling product 10.png"
+          class="w-full h-56 object-cover rounded-lg" />
+        <h3 class="mt-4 text-sm font-medium text-center">World Globe Retro Home Decor</h3>
+        <p class="text-center font-semibold mt-1">$65.32</p>
+        <button class="border border-black mt-3 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+          Choose an option
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="w-[92%] md:w-[82%] mx-auto mt-16 py-16">
+    <h2 class="text-center text-[32px] text-[#404142]">
+      Customer Reviews
+    </h2>
+    <p class="text-center text-[#6B6B6B] mt-2 text-sm max-w-xl mx-auto leading-relaxed">
+      Hear from our delighted customers who have transformed their homes with Charlie Lux Home's
+      exquisite décor. Real stories, real satisfaction.
+    </p>
+
+    <div class="relative mt-12 flex items-center justify-center">
+
+      <button id="review-prev"
+        class="absolute left-0 sm:left-4 md:left-10 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-colors">
+        <i class="fa-solid fa-chevron-left text-base"></i>
+      </button>
+
+      <div class="relative w-full max-w-5xl h-[300px] md:h-[320px]">
+
+        <div id="left-card"
+          class="review-card absolute top-6 left-1/2 -translate-x-[58%] w-[88%] md:w-[70%] bg-white rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.06)] px-8 py-10 md:px-12 md:py-12 text-center scale-[0.90] opacity-60 z-10">
+          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="left-stars">★★★★★</div>
+          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="left-text">
+            Charlie Lux Home exceeds expectations! Stunning wall art, exceptional quality. My favorite decor
+            destination.
+          </p>
+          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="left-name">Emily Johnson</h4>
+          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="left-location">Los Angeles, CA</p>
+        </div>
+
+        <div id="center-card"
+          class="review-card absolute top-0 left-1/2 -translate-x-1/2 w-[92%] md:w-[72%] bg-white rounded-2xl shadow-[0_22px_50px_rgba(0,0,0,0.08)] px-8 py-10 md:px-12 md:py-12 text-center scale-[1.0] z-20">
+          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="center-stars">★★★★★</div>
+          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="center-text">
+            Tableware excellence! Charlie Lux Home's quality and style exceeded my expectations. Highly recommend!
+            Luxury flower vases from Charlie Lux Home are exquisite! Elevate your space with their elegance
+          </p>
+          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="center-name">Christopher Wilson</h4>
+          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="center-location">Los Angeles, CA</p>
+        </div>
+
+        <div id="right-card"
+          class="review-card absolute top-6 left-1/2 -translate-x-[42%] w-[88%] md:w-[70%] bg-white rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.06)] px-8 py-10 md:px-12 md:py-12 text-center scale-[0.90] opacity-60 z-10">
+          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="right-stars">★★★★★</div>
+          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="right-text">
+            Impressive vintage styles, exceeded my expectations. Charlie Lux Home delivers top-notch home decor
+            perfection.
+          </p>
+          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="right-name">Michael Davis</h4>
+          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="right-location">Los Angeles, CA</p>
+        </div>
+
+      </div>
+
+      <button id="review-next"
+        class="absolute right-0 sm:right-4 md:right-10 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-colors">
+        <i class="fa-solid fa-chevron-right text-base"></i>
+      </button>
+
+    </div>
+  </section>
+
+  <section class="bg-[#F2EEEB] py-14">
+    <div class="w-[92%] md:w-[82%] mx-auto bg-white rounded-xl px-8 py-10 shadow-sm">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <div>
+          <h2 class="text-[28px] md:text-[32px] font-semibold text-[#404142]">
+            Subscribe To Our Newsletter
+          </h2>
+
+          <p class="text-[#6B6B6B] mt-3 text-[15px] leading-relaxed max-w-md">
+            Join the Charlie Lux Home community! Be the first to discover new arrivals,
+            design tips, and special offers to transform your home.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex items-center">
+            <input type="email" placeholder="Enter Your Email"
+              class="w-full border border-[#C9C9C9] rounded-lg px-4 py-3  text-[15px] placeholder-[#9B9B9B]" />
+
+            <button
+              class="ml-3 bg-[#3D3D3D] text-white px-6 py-3 rounded-lg flex items-center gap-2 text-[15px] font-medium">
+              <span>Subscribe</span>
+              <span class="text-lg">➜</span>
+            </button>
+          </div>
+
+          <p class="text-[#6B6B6B] text-xs mt-3">
+            We care about your data in our
+            <a href="#" class="underline">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-white pt-16 pb-8">
+    <div class="w-[92%] md:w-[82%] mx-auto">
+      <div class="grid md:grid-cols-3 gap-12">
+
+        <div>
+
+          <img src="./assets/images/Logo.png" alt="Logo" class="w-16 mb-5">
+
+          <p class="text-[#6B6B6B] text-[15px] leading-relaxed max-w-sm">
+            Charlie Lux Home delivers timeless, elegant décor that
+            enhances comfort and style, transforming spaces into
+            personalized, inviting homes.
+          </p>
+
+          <div class="flex items-center gap-4 mt-6">
+            <a href="#">
+              <img src="./assets/images/footer/Facebook.png" alt="Facebook" class="w-8 h-8">
+            </a>
+            <a href="#">
+              <img src="./assets/images/footer/Instagram.png" alt="Instagram" class="w-8 h-8">
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
+            Quick Links
+          </h3>
+
+          <ul class="space-y-2 text-[#6B6B6B]">
+            <li><a href="#" class="hover:text-black">Shop All</a></li>
+            <li><a href="#" class="hover:text-black">Collections</a></li>
+            <li><a href="#" class="hover:text-black">About Us</a></li>
+            <li><a href="#" class="hover:text-black">FAQ’s</a></li>
+            <li><a href="#" class="hover:text-black">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
+            Policies
+          </h3>
+
+          <ul class="space-y-2 text-[#6B6B6B]">
+            <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-black">Refund Policy</a></li>
+            <li><a href="#" class="hover:text-black">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-black">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[#D3D3D3] my-10"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+        <p class="text-[#6B6B6B] text-sm">
+          ©Copyright 2024
+          <a href="#" class="font-semibold underline">Thevisiontech</a> |
+          All Rights Reserved.
+        </p>
+
+        <div class="flex items-center flex-wrap gap-3">
+          <img src="./assets/images/footer/Frame-0.png" class="h-6" alt="AMEX" />
+          <img src="./assets/images/footer/Frame-1.png" class="h-6" alt="IPAY" />
+          <img src="./assets/images/footer/Frame-2.png" class="h-6" alt="Diners Club cards" />
+          <img src="./assets/images/footer/Frame-4.png" class="h-6" alt="DISCOVER" />
+          <img src="./assets/images/footer/Frame-3.png" class="h-6" alt="ELO" />
+          <img src="./assets/images/footer/Frame-10.png" class="h-6" alt="E-PAY" />
+          <img src="./assets/images/footer/Frame-12.png" class="h-6" alt="VISA" />
+          <img src="./assets/images/footer/Frame-7.png" class="h-6" alt="JCB" />
+          <img src="./assets/images/footer/Frame-9.png" class="h-6" alt="PAYPAL" />
+          <img src="./assets/images/footer/Frame-11.png" class="h-6" alt="V-PAY" />
+          <img src="./assets/images/footer/Frame-8.png" class="h-6" alt="MASTER-CARD" />
+          <img src="./assets/images/footer/Frame-5.png" class="h-6" alt="FB-PAY" />
+          <img src="./assets/images/footer/Frame-6.png" class="h-6" alt="G-PAY" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
