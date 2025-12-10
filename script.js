@@ -17,105 +17,95 @@ setInterval(() => {
   announcementSlider.style.transform = `translateX(-${annIndex * 100}%)`;
 }, 3000);
 
-let banIndex = 0;
-const bannerSlides = document.getElementById("banner-slides");
-const totalBanners = bannerSlides.children.length;
 
-document.getElementById("next-banner").onclick = () => {
-  banIndex = (banIndex + 1) % totalBanners;
-  bannerSlides.style.transform = `translateX(-${banIndex * 100}%)`;
-};
+const slidesContainer = document.getElementById('banner-slides');
+const slides = Array.from(slidesContainer.children);
+let currentIndex = 0;
 
-document.getElementById("prev-banner").onclick = () => {
-  banIndex = (banIndex - 1 + totalBanners) % totalBanners;
-  bannerSlides.style.transform = `translateX(-${banIndex * 100}%)`;
-};
+function goToSlide(index) {
+  const width = slides[0].clientWidth;
+  slidesContainer.style.transform = `translateX(-${index * width}px)`;
+}
 
-setInterval(() => {
-  banIndex = (banIndex + 1) % totalBanners;
-  bannerSlides.style.transform = `translateX(-${banIndex * 100}%)`;
-}, 5000);
+document.getElementById('next-banner').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  goToSlide(currentIndex);
+});
+
+document.getElementById('prev-banner').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  goToSlide(currentIndex);
+});
+
+window.addEventListener('resize', () => goToSlide(currentIndex));
+
+
 
 function scrollArrivals(direction) {
   const slider = document.getElementById("new-arrivals");
   slider.scrollBy({
     left: direction * 300,
-    behavior: "smooth",
+    behavior: "smooth"
   });
 }
 
-const mobileBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-mobileBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+mobileBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
 });
 
-const reviews = [
-  {
-    id: 1,
-    text: "Charlie Lux Home exceeds expectations! Stunning wall art, exceptional quality. My favorite decor destination.",
-    name: "Emily Johnson",
-    location: "Los Angeles, CA",
-    rating: 5,
-  },
-  {
-    id: 2,
-    text: "Tableware excellence! Charlie Lux Home's quality and style exceeded my expectations. Highly recommend! Luxury flower vases from Charlie Lux Home are exquisite! Elevate your space with their elegance.",
-    name: "Christopher Wilson",
-    location: "Los Angeles, CA",
-    rating: 5,
-  },
-  {
-    id: 3,
-    text: "Impressive vintage styles, exceeded my expectations. Charlie Lux Home delivers top-notch home decor perfection.",
-    name: "Michael Davis",
-    location: "Los Angeles, CA",
-    rating: 5,
-  },
-];
 
-let currentIndex = 1;
-function getReviewIndex(offset) {
-  const index = currentIndex + offset;
-  return ((index % reviews.length) + reviews.length) % reviews.length;
-}
-function updateCards() {
-  const leftReview = reviews[getReviewIndex(-1)];
-  const centerReview = reviews[getReviewIndex(0)];
-  const rightReview = reviews[getReviewIndex(1)];
+document.addEventListener('DOMContentLoaded', () => {
+   
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const cards = document.querySelectorAll('.review-card'); 
+    
+   
+    let currentIndex = 1; 
+    const numCards = cards.length; 
 
-  document.getElementById("left-stars").textContent = "★".repeat(
-    leftReview.rating
-  );
-  document.getElementById("left-text").textContent = leftReview.text;
-  document.getElementById("left-name").textContent = leftReview.name;
-  document.getElementById("left-location").textContent = leftReview.location;
+   
+    function updateCarousel() {
+        cards.forEach((card, index) => {
+            
+            card.classList.remove('card-center', 'card-left', 'card-right');
 
-  document.getElementById("center-stars").textContent = "★".repeat(
-    centerReview.rating
-  );
-  document.getElementById("center-text").textContent = centerReview.text;
-  document.getElementById("center-name").textContent = centerReview.name;
-  document.getElementById("center-location").textContent =
-    centerReview.location;
+            const position = (index - currentIndex + numCards) % numCards;
 
-  document.getElementById("right-stars").textContent = "★".repeat(
-    rightReview.rating
-  );
-  document.getElementById("right-text").textContent = rightReview.text;
-  document.getElementById("right-name").textContent = rightReview.name;
-  document.getElementById("right-location").textContent = rightReview.location;
-}
+            if (position === 0) {
+               
+                card.classList.add('card-center');
+                
+            } else if (position === 1) {
+                
+                card.classList.add('card-right');
+                
+            } else if (position === numCards - 1) {
+           
+                card.classList.add('card-left');
+                
+            } else {
+               
+                card.classList.add('opacity-0', 'transform', 'scale-75'); 
+            }
+        });
+    }
+    prevBtn.addEventListener('click', () => {
 
-function handlePrev() {
-  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-  updateCards();
-}
-function handleNext() {
-  currentIndex = (currentIndex + 1) % reviews.length;
-  updateCards();
-}
-document.getElementById("review-prev").addEventListener("click", handlePrev);
-document.getElementById("review-next").addEventListener("click", handleNext);
-updateCards();
+        currentIndex = (currentIndex - 1 + numCards) % numCards;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % numCards;
+        updateCarousel();
+    });
+
+    updateCarousel(); 
+});
+
+
+

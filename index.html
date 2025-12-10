@@ -14,11 +14,11 @@
 <body class="bg-[#EFEBE8] font-[Inter] ">
 
   <div class="relative py-2 px-3 text-xs sm:text-sm flex items-center justify-between gap-2 sm:gap-4 bg-white">
-    <button id="prev-announcement" class="text-[#404142] text-lg sm:text-xl">
+    <button id="prev-announcement" class="nav-btn" aria-label="Previous announcement">
       <i class="fa-solid fa-angle-left"></i>
     </button>
 
-    <div class="overflow-hidden flex-1 ">
+    <div class="overflow-hidden flex-1">
       <div id="announcement-slider" class="flex transition-transform duration-500 ease-in-out">
         <div class="min-w-full flex-shrink-0 text-center text-[#404142]">
           Sign Up Our Newsletter And Save 10% On Your First Order
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <button id="next-announcement" class="text-[#404142] text-lg sm:text-xl">
+    <button id="next-announcement" class="nav-btn" aria-label="Next announcement">
       <i class="fa-solid fa-angle-right"></i>
     </button>
   </div>
@@ -107,66 +107,71 @@
 
 
       <div class="w-full flex-shrink-0 relative">
-        <img src="./assets/images/banner/Desktop Banner 1.png" class="hidden md:block w-full h-full object-cover" />
-        <img src="./assets/images/banner/Mobile Banner 1.png" class="block md:hidden w-full h-full object-cover" />
+
+        <img src="./assets/images/banner/Desktop-Banner-1.png" alt="Elegant home decor by Charlie Lux Home"
+          class="hidden md:block w-full h-full object-cover" />
+
+        <img src="./assets/images/banner/Mobile-Banner-1.png" alt="Elegant home decor by Charlie Lux Home"
+          class="block md:hidden w-full h-full object-cover" />
 
         <div class="absolute inset-0 flex flex-col justify-center items-start text-white p-4 sm:p-6 md:pl-24">
-          <h2 class="text-1xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
-            Unleash Elegance:Your Home, Your Style
+          <h2 class="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3 leading-snug">
+            Unleash Elegance: Your Home, Your Style
           </h2>
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+          <p class="text-xs sm:text-sm md:text-base lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
             Transform your living space with Charlie Lux Home’s curated collection. From statement lighting to elegant
             rugs and wall art, each piece is designed to bring timeless style and comfort to your home.
           </p>
           <button
-            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-semibold">
             <i class="fa-solid fa-arrow-right"></i> Shop Now
           </button>
         </div>
       </div>
 
-
       <div class="w-full flex-shrink-0 relative">
-        <img src="./assets/images/banner/Desktop Banner 2.png" class="hidden md:block w-full h-full object-cover" />
-        <img src="./assets/images/banner/Mobile Banner 2.png" class="block md:hidden w-full h-full object-cover" />
+        <img src="./assets/images/banner/Desktop-Banner-2.png" alt="Luxurious drinkware collection on desktop"
+          class="hidden md:block w-full h-full object-cover" />
+        <img src="./assets/images/banner/Mobile-Banner-2.png" alt="Luxurious drinkware collection on mobile"
+          class="block md:hidden w-full h-full object-cover" />
 
         <div class="absolute inset-0 flex flex-col justify-center items-end text-white p-4 sm:p-6 md:pr-24 text-right">
-          <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
-            Elevate Every Sip:Luxurious Drinkware Collection
+          <h2 class="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3 leading-snug">
+            Elevate Every Sip: Luxurious Drinkware Collection
           </h2>
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+          <p class="text-xs sm:text-sm md:text-base lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
             Discover our stunning glassware collection, designed to add a touch of sophistication to any occasion.
             Perfect for entertaining or everyday indulgence, make every moment unforgettable with our polished, elegant
             pieces.
           </p>
           <button
-            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-semibold">
             <i class="fa-solid fa-arrow-right"></i> Shop Now
           </button>
         </div>
       </div>
 
-
       <div class="w-full flex-shrink-0 relative">
-        <img src="./assets/images/banner/Desktop Banner 3.png" class="hidden md:block w-full h-full object-cover" />
-        <img src="./assets/images/banner/Mobile Banner 3.png" class="block md:hidden w-full h-full object-cover" />
+        <img src="./assets/images/banner/Desktop-Banner-3.png" alt="Stylish home interior desktop"
+          class="hidden md:block w-full h-full object-cover" />
+        <img src="./assets/images/banner/Mobile-Banner-3.png" alt="Stylish home interior mobile"
+          class="block md:hidden w-full h-full object-cover" />
 
         <div class="absolute inset-0 flex flex-col justify-center items-start text-white p-4 sm:p-6 md:pl-24">
-          <h2 class="text-1xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3">
-            Raising Homes,Exceeding Expectations
+          <h2 class="text-lg sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-3 leading-snug">
+            Raising Homes, Exceeding Expectations
           </h2>
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
+          <p class="text-xs sm:text-sm md:text-base lg:text-xl max-w-xs sm:max-w-md md:max-w-xl mb-4 sm:mb-6">
             At Charlie Lux Home, we offer more than just décor. Our carefully curated pieces bring elegance, comfort,
             and style to every corner of your home, elevating spaces beyond your expectations.
           </p>
           <button
-            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold">
+            class="flex items-center gap-2 bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-semibold">
             <i class="fa-solid fa-arrow-right"></i> Shop Now
           </button>
         </div>
       </div>
     </div>
-
 
     <button id="prev-banner"
       class="absolute bottom-3 sm:bottom-6 right-16 sm:right-20 bg-black/60 text-white p-2 sm:p-3 text-sm sm:text-lg rounded-full hover:bg-black/80 z-50">
@@ -450,68 +455,51 @@
     </div>
   </section>
 
-  <section class="w-[92%] md:w-[82%] mx-auto mt-16 py-16">
-    <h2 class="text-center text-[32px] text-[#404142]">
-      Customer Reviews
-    </h2>
-    <p class="text-center text-[#6B6B6B] mt-2 text-sm max-w-xl mx-auto leading-relaxed">
-      Hear from our delighted customers who have transformed their homes with Charlie Lux Home's
-      exquisite décor. Real stories, real satisfaction.
-    </p>
-
-    <div class="relative mt-12 flex items-center justify-center">
-
-      <button id="review-prev"
-        class="absolute left-0 sm:left-4 md:left-10 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-colors">
-        <i class="fa-solid fa-chevron-left text-base"></i>
-      </button>
-
-      <div class="relative w-full max-w-5xl h-[300px] md:h-[320px]">
-
-        <div id="left-card"
-          class="review-card absolute top-6 left-1/2 -translate-x-[58%] w-[88%] md:w-[70%] bg-white rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.06)] px-8 py-10 md:px-12 md:py-12 text-center scale-[0.90] opacity-60 z-10">
-          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="left-stars">★★★★★</div>
-          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="left-text">
-            Charlie Lux Home exceeds expectations! Stunning wall art, exceptional quality. My favorite decor
-            destination.
-          </p>
-          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="left-name">Emily Johnson</h4>
-          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="left-location">Los Angeles, CA</p>
+<section id="customer-reviews" class="w-full max-w-7xl mx-auto mt-16 bg-[#EFEBE8] px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Customer Reviews</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Hear from our delighted customers who have transformed their homes with Charlie Lux Home's exquisite décor. Real stories, real satisfaction.
+        </p>
+        <div class="carousel-wrapper relative h-[450px] sm:h-[400px] overflow-hidden">
+            <div id="review-cards-wrapper" class="relative w-full h-full">
+               
+                <div id="card-0" class="review-card bg-white shadow-xl rounded-xl border border-gray-200">
+                    <div class="flex justify-center mb-4"><span class="text-yellow-500 text-3xl">★★★★★</span></div>
+                    <p class="text-gray-700 text-base mb-6">
+                        Charlie Lux Home exceeds expectations! Stunning wall art, exceptional quality. My favorite decor destination.
+                    </p>
+                    <p class="text-lg font-bold text-gray-900">Emily Johnson</p>
+                    <p class="text-sm text-gray-500">Los Angeles, CA</p>
+                </div>
+                <div id="card-1" class="review-card bg-white shadow-xl rounded-xl border border-gray-200">
+                    <div class="flex justify-center mb-4"><span class="text-yellow-500 text-3xl">★★★★★</span></div>
+                    <p class="text-gray-700 text-base mb-6">
+                        Tableware excellence! Charlie Lux Home's quality and style exceeded my expectations. Highly recommend! Luxury flower vases from Charlie Lux Home are exquisite! Elevate your space with their elegance
+                    </p>
+                    <p class="text-lg font-bold text-gray-900">Christopher Wilson</p>
+                    <p class="text-sm text-gray-500">Los Angeles, CA</p>
+                </div>
+                <div id="card-2" class="review-card bg-white shadow-xl rounded-xl border border-gray-200">
+                    <div class="flex justify-center mb-4"><span class="text-yellow-500 text-3xl">★★★★★</span></div>
+                    <p class="text-gray-700 text-base mb-6">
+                        Impressive vintage styles, exceeded my expectations. Charlie Lux Home delivers top-notch home decor perfection.
+                    </p>
+                    <p class="text-lg font-bold text-gray-900">Michael Davis</p>
+                    <p class="text-sm text-gray-500">Los Angeles, CA</p>
+                </div>
+            </div>
+            <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-[#3D3D3D] text-white rounded-full shadow-lg border border-gray-200 focus:outline-none transition-colors  z-30">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-[#3D3D3D] text-white rounded-full shadow-lg border border-gray-200 focus:outline-none transition-colors  z-30">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-
-        <div id="center-card"
-          class="review-card absolute top-0 left-1/2 -translate-x-1/2 w-[92%] md:w-[72%] bg-white rounded-2xl shadow-[0_22px_50px_rgba(0,0,0,0.08)] px-8 py-10 md:px-12 md:py-12 text-center scale-[1.0] z-20">
-          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="center-stars">★★★★★</div>
-          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="center-text">
-            Tableware excellence! Charlie Lux Home's quality and style exceeded my expectations. Highly recommend!
-            Luxury flower vases from Charlie Lux Home are exquisite! Elevate your space with their elegance
-          </p>
-          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="center-name">Christopher Wilson</h4>
-          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="center-location">Los Angeles, CA</p>
-        </div>
-
-        <div id="right-card"
-          class="review-card absolute top-6 left-1/2 -translate-x-[42%] w-[88%] md:w-[70%] bg-white rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.06)] px-8 py-10 md:px-12 md:py-12 text-center scale-[0.90] opacity-60 z-10">
-          <div class="text-[#FFC94F] text-2xl mb-4 tracking-[4px]" id="right-stars">★★★★★</div>
-          <p class="text-[#404142] text-sm md:text-base leading-relaxed max-w-xl mx-auto" id="right-text">
-            Impressive vintage styles, exceeded my expectations. Charlie Lux Home delivers top-notch home decor
-            perfection.
-          </p>
-          <h4 class="mt-7 text-[#404142] text-base md:text-lg" id="right-name">Michael Davis</h4>
-          <p class="text-[11px] md:text-xs text-[#6B6B6B] mt-1" id="right-location">Los Angeles, CA</p>
-        </div>
-
-      </div>
-
-      <button id="review-next"
-        class="absolute right-0 sm:right-4 md:right-10 bg-black/60 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-colors">
-        <i class="fa-solid fa-chevron-right text-base"></i>
-      </button>
-
     </div>
-  </section>
+</section>
 
-  <section class="bg-[#F2EEEB] py-14">
+  <section class="bg-[#F2EEEB] ">
     <div class="w-[92%] md:w-[82%] mx-auto bg-white rounded-xl px-8 py-10 shadow-sm">
       <div class="grid md:grid-cols-2 gap-10 items-center">
 
@@ -548,86 +536,81 @@
   </section>
 
 
-  <footer class="bg-white pt-16 pb-8">
-    <div class="w-[92%] md:w-[82%] mx-auto">
-      <div class="grid md:grid-cols-3 gap-12">
+ <footer class="bg-[#F2EEEB] pt-16 pb-8">
+  <div class="w-[92%] md:w-[82%] mx-auto">
+    <div class="grid gap-10 md:gap-12 md:justify-items-end md:grid-cols-3 lg:items-start">
 
-        <div>
-
-          <img src="./assets/images/Logo.png" alt="Logo" class="w-16 mb-5">
-
-          <p class="text-[#6B6B6B] text-[15px] leading-relaxed max-w-sm">
-            Charlie Lux Home delivers timeless, elegant décor that
-            enhances comfort and style, transforming spaces into
-            personalized, inviting homes.
-          </p>
-
-          <div class="flex items-center gap-4 mt-6">
-            <a href="#">
-              <img src="./assets/images/footer/Facebook.png" alt="Facebook" class="w-8 h-8">
-            </a>
-            <a href="#">
-              <img src="./assets/images/footer/Instagram.png" alt="Instagram" class="w-8 h-8">
-            </a>
-          </div>
+      <div class="text-center md:text-left">
+        <img src="./assets/images/Logo.png" alt="Logo"
+             class="w-16 h-auto mb-5 mx-auto md:mx-0">
+        <p class="text-[#6B6B6B] text-[15px] leading-relaxed max-w-sm mx-auto md:mx-0">
+          Charlie Lux Home delivers timeless, elegant décor that
+          enhances comfort and style, transforming spaces into
+          personalized, inviting homes.
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-4 mt-6">
+          <a href="#">
+            <img src="./assets/images/footer/Facebook.png" alt="Facebook" class="w-8 h-8">
+          </a>
+          <a href="#">
+            <img src="./assets/images/footer/Instagram.png" alt="Instagram" class="w-8 h-8">
+          </a>
         </div>
-
-        <div>
-          <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
-            Quick Links
-          </h3>
-
-          <ul class="space-y-2 text-[#6B6B6B]">
-            <li><a href="#" class="hover:text-black">Shop All</a></li>
-            <li><a href="#" class="hover:text-black">Collections</a></li>
-            <li><a href="#" class="hover:text-black">About Us</a></li>
-            <li><a href="#" class="hover:text-black">FAQ’s</a></li>
-            <li><a href="#" class="hover:text-black">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
-            Policies
-          </h3>
-
-          <ul class="space-y-2 text-[#6B6B6B]">
-            <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-black">Refund Policy</a></li>
-            <li><a href="#" class="hover:text-black">Shipping Policy</a></li>
-            <li><a href="#" class="hover:text-black">Terms of Service</a></li>
-          </ul>
-        </div>
-
       </div>
 
-      <div class="border-t border-[#D3D3D3] my-10"></div>
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class=" md:text-start md:justify-self-end">
+        <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
+          Quick Links
+        </h3>
+        <ul class="space-y-2 text-[#6B6B6B]">
+          <li><a href="#" class="hover:text-black transition-colors">Shop All</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">Collections</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">FAQ’s</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
 
-        <p class="text-[#6B6B6B] text-sm">
-          ©Copyright 2024
-          <a href="#" class="font-semibold underline">Thevisiontech</a> |
-          All Rights Reserved.
-        </p>
-
-        <div class="flex items-center flex-wrap gap-3">
-          <img src="./assets/images/footer/Frame-0.png" class="h-6" alt="AMEX" />
-          <img src="./assets/images/footer/Frame-1.png" class="h-6" alt="IPAY" />
-          <img src="./assets/images/footer/Frame-2.png" class="h-6" alt="Diners Club cards" />
-          <img src="./assets/images/footer/Frame-4.png" class="h-6" alt="DISCOVER" />
-          <img src="./assets/images/footer/Frame-3.png" class="h-6" alt="ELO" />
-          <img src="./assets/images/footer/Frame-10.png" class="h-6" alt="E-PAY" />
-          <img src="./assets/images/footer/Frame-12.png" class="h-6" alt="VISA" />
-          <img src="./assets/images/footer/Frame-7.png" class="h-6" alt="JCB" />
-          <img src="./assets/images/footer/Frame-9.png" class="h-6" alt="PAYPAL" />
-          <img src="./assets/images/footer/Frame-11.png" class="h-6" alt="V-PAY" />
-          <img src="./assets/images/footer/Frame-8.png" class="h-6" alt="MASTER-CARD" />
-          <img src="./assets/images/footer/Frame-5.png" class="h-6" alt="FB-PAY" />
-          <img src="./assets/images/footer/Frame-6.png" class="h-6" alt="G-PAY" />
-        </div>
+      <div class=" md:text-start md:justify-self-end">
+        <h3 class="text-[20px] font-semibold text-[#404142] mb-4">
+          Policies
+        </h3>
+        <ul class="space-y-2 text-[#6B6B6B]">
+          <li><a href="#" class="hover:text-black transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">Refund Policy</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">Shipping Policy</a></li>
+          <li><a href="#" class="hover:text-black transition-colors">Terms of Service</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <div class="border-t border-[#D3D3D3] my-10"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-[#6B6B6B] text-sm text-center md:text-left">
+        ©Copyright 2024
+        <a href="#" class="font-semibold underline">Thevisiontech</a> |
+        All Rights Reserved.
+      </p>
+
+      <div class="flex items-center justify-center md:justify-end flex-wrap gap-3">
+        <img src="./assets/images/footer/Frame-0.png" class="h-6 w-auto" alt="AMEX" />
+        <img src="./assets/images/footer/Frame-1.png" class="h-6 w-auto" alt="IPAY" />
+        <img src="./assets/images/footer/Frame-2.png" class="h-6 w-auto" alt="Diners Club cards" />
+        <img src="./assets/images/footer/Frame-4.png" class="h-6 w-auto" alt="DISCOVER" />
+        <img src="./assets/images/footer/Frame-3.png" class="h-6 w-auto" alt="ELO" />
+        <img src="./assets/images/footer/Frame-10.png" class="h-6 w-auto" alt="E-PAY" />
+        <img src="./assets/images/footer/Frame-12.png" class="h-6 w-auto" alt="VISA" />
+        <img src="./assets/images/footer/Frame-7.png" class="h-6 w-auto" alt="JCB" />
+        <img src="./assets/images/footer/Frame-9.png" class="h-6 w-auto" alt="PAYPAL" />
+        <img src="./assets/images/footer/Frame-11.png" class="h-6 w-auto" alt="V-PAY" />
+        <img src="./assets/images/footer/Frame-8.png" class="h-6 w-auto" alt="MASTER-CARD" />
+        <img src="./assets/images/footer/Frame-5.png" class="h-6 w-auto" alt="FB-PAY" />
+        <img src="./assets/images/footer/Frame-6.png" class="h-6 w-auto" alt="G-PAY" />
+      </div>
+    </div>
+  </div>
+</footer>
   <script src="script.js"></script>
 
 </body>
